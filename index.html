@@ -5,72 +5,80 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woven Plaid Generator</title>
   </head>
   
   <body>
-  <div id="body-container">
-    <div id="list-grid">
-    <div id="list-container" class="flex-column">
-      <div id="colors">
-      <h2>Colors</h2>
-        <p class="help-text">The yarn colors used in the design. The left text field displays the character code assigned to the yarn. Colors are randomly generated. Click on the right button to change the color. </p>
-      <div class="flex-row">
-        <table id="colors-list"></table>
-      </div>
-      </div>
-      <div id="color-settings">
-      </div>
-      
-      <div id="settings">
-        <div id="settings-header">
-          <h2>Settings</h2>
+    <div id="topbar">
+      <h1>Woven Plaid Generator</h1>
+    </div>
+    <div id="body-container">
+      <div id="list-grid" class="">
+        <div id="list-container" class="flex-column">
+          <div id="colors">
+          <h2>Colors</h2>
+            <p class="help-text">
+              The yarn colors used in the design. The left text field displays the character code assigned to the yarn. Colors are randomly generated. Click on the right button to change the color.
+            </p>
+          <div class="flex-row">
+            <table id="colors-list"></table>
+          </div>
+          </div>
+          <div id="color-settings">
+          </div>
+          
+          <div id="settings">
+            <div id="settings-header">
+              <h2>Settings</h2>
+            </div>
+            <p class="help-text">
+              Change the appearance of the woven cloth.
+            </p>
+          
+          <div id="dimensions">
+            <div id="num-warps"></div> warps x
+            <div id="num-wefts"></div> wefts
+          </div>
+          
+          <div id="thread-menu" class="setting">
+            <h3>Threading</h3>
+            <p class="help-text"> Change the draft used for warping.
+            </p>
+          </div>
+          <div id="treadle-as" class="setting">
+            <p class="help-text">"Tromp as writ" -- if checked, treadling will match threading.
+          </div>
+          <div id="treadle-menu" class="setting">
+            <h3>Treadling</h3>
+          </div>
         </div>
-        <p class="help-text"> Change the appearance of the woven cloth.
-        </p>
-      
-      <div id="dimensions">
-        <div id="num-warps"></div> warps x
-        <div id="num-wefts"></div> wefts
-      </div>
-      
-      <div id="thread-menu" class="setting">
-        <h3>Threading</h3>
-        <p class="help-text"> Change the draft used for warping.
-        </p>
-      </div>
-      <div id="treadle-as" class="setting">
-        <p class="help-text">"Tromp as writ" -- if checked, treadling will match threading.
-      </div>
-      <div id="treadle-menu" class="setting">
-        <h3>Treadling</h3>
-      </div>
-    </div>
-      
-    </div>
-    </div>
-    
-    <div class="grid-row-1 canvas-grid">
-      <div id="sequence" class="text-entry">
-        <div id="sequence-settings" class="flex-row">
-          <h2 id="sequence-label" class="text-field-label">Color Sequence</h2>
-        </div>
-        <p class="help-text">Type the code assigned to each color in the sequence you want. One character represents one warp/weft thread.</p>
-      </div>
-      <div id="sequence-weft" class="text-entry weft">
-        <div id="sequence-weft-settings" class="flex-row">
-          <h2 id="sequence-weft-label" class="text-field-label">Weft Color Sequence</h2>
+          
         </div>
       </div>
       
+      <div class="grid-row-1 canvas-grid grid-top">
+        <div id="sequence" class="text-entry">
+          <div id="sequence-settings" class="flex-row">
+            <h2 id="sequence-label" class="text-field-label">Color Sequence</h2>
+          </div>
+          <p class="help-text">Type the code assigned to each color in the sequence you want. One character represents one warp/weft thread.</p>
+        </div>
+        <div id="sequence-weft" class="text-entry weft">
+          <div id="sequence-weft-settings" class="flex-row">
+            <h2 id="sequence-weft-label" class="text-field-label">Weft Color Sequence</h2>
+          </div>
+        </div>
+        
+        
+      </div>
+      
+      <main class="grid-row-2 canvas-grid">
+        
+        <h2>Resulting Plaid</h2>
+      </main>
       
     </div>
-    
-    <main class="grid-row-2 canvas-grid">
-      
-      <h2>Resulting Plaid</h2>
-    </main>
-    
-  </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"></script>
     <script src="Threading.js"></script>
